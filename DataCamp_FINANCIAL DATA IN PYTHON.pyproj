@@ -1,0 +1,102 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b0c6565b-085c-4990-b463-712e348fea82</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>4.1.1_Median market capitalization by sector.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>DataCamp_FINANCIAL DATA IN PYTHON</Name>
+    <RootNamespace>DataCamp_FINANCIAL DATA IN PYTHON</RootNamespace>
+    <InterpreterId>MSBuild|env2|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="3.3.3_Summarize categorical variables.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3.3.4_Companies by sector on all exchanges.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="4.1.1_Median market capitalization by sector.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="4.1_Summarize numeric data by category.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataCamp_FINANCIAL_DATA_IN_PYTHON.py" />
+    <Compile Include="Economic data from the Federal Reserve.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compare bond and stock performance.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Get the ticker of the largest consumer services company.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Get the largest consumer company listed after 1998.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Get data for the 3 largest financial companies.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3.1_Summarize your data with descriptive stats.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3.2_Describe the distribution of your data with quantiles.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3.3.0_Visualize the distribution of your data.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3.3.1_Growth rates in Brazil, China, and the US.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3.3.2_Highlighting values in the distribution.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3.3.5_Technology IPOs by year on all exchanges.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Select the top 5 listed consumer companies.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\..\Documents\MEGA\MEGAsync\Python\Курс DataCamp\IMPORTING AND MANAGING FINANCIAL DATA IN PYTHON\per_capita_income.csv">
+      <Link>per_capita_income.csv</Link>
+    </Content>
+    <Content Include="income_growth.csv" />
+    <Content Include="listings.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env2\">
+      <Id>env2</Id>
+      <Version>3.7</Version>
+      <Description>env2 (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
