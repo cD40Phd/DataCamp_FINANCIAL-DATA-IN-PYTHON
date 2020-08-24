@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b0c6565b-085c-4990-b463-712e348fea82</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>4.1.1_Median market capitalization by sector.py</StartupFile>
+    <StartupFile>4.2.1_Many ways to aggregate.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -31,7 +31,16 @@
     <Compile Include="4.1.1_Median market capitalization by sector.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="4.1_Summarize numeric data by category.py">
+    <Compile Include="4.1.2_Median market capitalization by IPO year.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="4.1.0_Summarize numeric data by category.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="4.1.3_All summary statistics by sector.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="4.2.1_Many ways to aggregate.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataCamp_FINANCIAL_DATA_IN_PYTHON.py" />

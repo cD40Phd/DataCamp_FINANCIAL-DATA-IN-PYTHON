@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 
 listings = pd.read_excel('listings.xlsx', sheet_name=['amex', 'nasdaq', 'nyse'], na_values=['n/a'])
-print('listings.info', listings)
+print('listings', listings)
 
 # Create the list exchanges
 exchanges = ['amex', 'nasdaq', 'nyse']
