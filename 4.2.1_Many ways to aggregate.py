@@ -18,47 +18,51 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-
-xls = pd.ExcelFile('C:\\Users\\Dmitry\\Documents\\MEGA\\MEGAsync\\Python\\Курс DataCamp\\IMPORTING AND MANAGING FINANCIAL DATA IN PYTHON\\listings.xlsx')
-exchanges = xls.sheet_names
 listings = []
+
+xls = pd.ExcelFile('listings.xlsx')
+exchanges = xls.sheet_names
 
 # Use for loop to create listing_data
 for exchange in exchanges:
     listing = pd.read_excel(xls, sheet_name=exchange)
-    listing['Exchange'] = exchanges
+    # Add reference col
+    listing['Exchange'] = exchange
+    # Add DataFrame to list
     listings.append(listing)
+
 # Combine three DataFrames
 combined_listings = pd.concat(listings)
+combined_listings.info()
 
-## DataFrames listings
-#listings = combined_listings # это уже не Excel файл
-#print('------------------------info()----------------------------------')
-## Inspect listings
-#listings.info()
-#print('------------------------head()----------------------------------')
-## Show listings head
-#print(listings.head())
-#print(listings.tail())
-#print('----------------------------------------------------------------')
+# DataFrames listings
+listings = combined_listings # это уже не Excel файл
+print('------------------------info()----------------------------------')
+# Inspect listings
+listings.info()
+print('------------------------head()----------------------------------')
+# Show listings head
+print(listings.head())
+print(listings.tail())
+print('----------------------------------------------------------------')
 
-## Group listings by Sector and Exchange
-#by_sector_exchange = listings.groupby(['Sector', 'Exchange'])
+# Group listings by Sector and Exchange
+by_sector_exchange = listings.groupby(['Sector', 'Exchange'])
 
-## Calculate the median market cap
-#mcap_by_sector_exchange = by_sector_exchange.market_cap_m.median()
+# Calculate the median market cap
+mcap_by_sector_exchange = by_sector_exchange.median()
 
-## Display the head of the result
-#print(mcap_by_sector_exchange.head())
+# Display the head of the result
+print(mcap_by_sector_exchange.head())
 
-## Unstack mcap_by_sector_exchange
-#mcap_unstacked = mcap_by_sector_exchange.unstack()
+# Unstack mcap_by_sector_exchange
+mcap_unstacked = mcap_by_sector_exchange.unstack()
 
-## Plot as a bar chart
-#mcap_unstacked.plot(kind='bar', title='Median Market Capitalization by Exchange')
+# Plot as a bar chart
+mcap_unstacked.plot(kind='bar', title='Median Market Capitalization by Exchange')
 
-## Set the x label
-#plt.xlabel('USD mn')
+# Set the x label
+plt.xlabel('USD mn')
 
-## Show the plot
-#plt.show()
+# Show the plot
+plt.show()

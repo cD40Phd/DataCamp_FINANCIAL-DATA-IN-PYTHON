@@ -36,6 +36,7 @@ stock_prices.info()
 
 # Plot close
 stock_prices['close'].plot(title=ticker)
+plt.xticks(rotation=45); plt.title('title') 
 
 # Show the plot
 plt.show()

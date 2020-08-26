@@ -20,7 +20,7 @@ nasdaq['market_cap_m'] = nasdaq['Market Capitalization'].div(1e6)
 nasdaq = nasdaq.drop('Market Capitalization', axis=1) # Drop column 
 nasdaq_by_sector = nasdaq.groupby('Sector') # Create groupby object 
 #for sector, data in nasdaq_by_sector: 
-#    print(sector, data.market_cap_m.mean())
+print('nasdaq, nasdaq_by_sector', nasdaq, nasdaq_by_sector)
 
 # Сделайте это просто и пропустите цикл
 mcap_by_sector = nasdaq_by_sector.market_cap_m.mean()

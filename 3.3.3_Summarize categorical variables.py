@@ -33,8 +33,8 @@ print('Как много IPO в год', amex['Sector'].value_counts())
 
 
 # Convert IPO Year to int
-ipo_by_yr = amex['IPO Year'].dropna().astype(int).value_counts() # dropna() - избавиться от пропущенных значений; astype(int) - преобразовать остаток в целые числа
-                                                                   # value_counts() - применённый к результату отображает правильные значения
+ipo_by_yr = amex['IPO Year'].dropna().astype(int).value_counts()    # dropna() - избавиться от пропущенных значений; astype(int) - преобразовать остаток в целые числа
+                                                                    # value_counts() - применённый к результату отображает правильные значения
 
 print('Конвертируем в int','ipo_by_yr',ipo_by_yr)
 
